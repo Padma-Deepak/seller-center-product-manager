@@ -1,0 +1,17 @@
+{
+  "name": "seller-center-product-manager",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Seller Center – Product Manager (React client + Node/Express API with mock data)",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "start": "npm start -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

@@ -1,0 +1,45 @@
+.shell { display: flex; min-height: 100vh; }
+.main { flex: 1; min-width: 0; }
+
+/* sidebar */
+.sidebar {
+  position: sticky; top: 0; align-self: flex-start; height: 100vh; width: 40px; flex: none;
+  background: #fff; display: flex; flex-direction: column; align-items: center; padding-top: 14px; gap: 6px;
+  border-right: 1px solid #eee;
+}
+.sidebar button { background: none; border: 0; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 6px; color: #333; }
+.sidebar .menu { margin-bottom: 8px; }
+.sidebar .nav-item:hover { background: #f1f1f1; }
+.sidebar .nav-item.current { color: var(--olive); background: #f3f5e2; }
+
+/* header */
+.topbar {
+  height: 48px; background: #fff; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 70px 0 24px;
+}
+.logo { display: flex; align-items: center; line-height: 1; }
+.logo .seller { font-size: 21px; font-weight: 700; letter-spacing: -0.5px; }
+.logo .center { font-size: 21px; font-weight: 300; letter-spacing: -0.5px; }
+.logo small { display: block; font-size: 6px; font-weight: 700; letter-spacing: .3px; text-align: right; margin-top: -2px; }
+.logo .dots { display: flex; flex-direction: column; gap: 3px; margin-left: 3px; margin-top: -12px; }
+.logo .dots i { width: 3px; height: 3px; border-radius: 50%; display: block; }
+.top-right { display: flex; align-items: center; gap: 24px; font-size: 11px; }
+.top-right .item { display: flex; align-items: center; gap: 6px; }
+.fpay { font-weight: 900; font-size: 15px; color: #54b948; letter-spacing: -.5px; }
+.fpay b { color: #1e9ed8; font-weight: 900; }
+.bell {
+  position: relative; width: 26px; height: 26px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,.15); display: grid; place-items: center; border: 0; padding: 0;
+}
+.bell .badge { position: absolute; top: -1px; right: 0; width: 6px; height: 6px; background: #1a73e8; border-radius: 50%; }
+
+/* floating widgets */
+.fab {
+  position: fixed; right: -10px; bottom: 28px; width: 40px; height: 40px; border-radius: 50%;
+  background: #1db954; display: grid; place-items: center; color: #fff; border: 0; z-index: 20;
+}
+.survey {
+  position: fixed; right: 0; bottom: 0; width: 210px; background: #fff; border-radius: 12px 0 0 0;
+  padding: 14px 14px 10px; font-weight: 700; font-size: 11.5px; display: flex; justify-content: space-between;
+  align-items: center; box-shadow: 0 -1px 6px rgba(0,0,0,.08); z-index: 20;
+}
